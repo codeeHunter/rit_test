@@ -1,0 +1,59 @@
+{
+  "sequence": [
+    {
+      "type": "action",
+      "name": "CreateFile",
+      "result": "",
+      "parameters": {
+        "filename": "example.txt"
+      }
+    },
+    {
+      "type": "condition",
+      "name": "DateTimeCondition",
+      "result": "",
+      "parameters": {
+        "comparison": "greater_than",
+        "value": "2023-01-01T00:00:00Z"
+      },
+      "yes": [
+        {
+          "type": "action",
+          "name": "WriteToFile",
+          "result": "",
+          "parameters": {
+            "filename": "example.txt",
+            "content": "Hello, World!"
+          }
+        }
+      ],
+      "no": [
+        {
+          "type": "action",
+          "name": "DeleteFile",
+          "result": "",
+          "parameters": {
+            "filename": "example.txt"
+          }
+        }
+      ]
+    },
+    {
+      "type": "action",
+      "name": "GetFileCreationTime",
+      "result": "",
+      "parameters": {
+        "filename": "new_example.txt"
+      }
+    },
+    {
+      "type": "action",
+      "name": "WriteToFile",
+      "result": "",
+      "parameters": {
+        "filename": "new_example.txt",
+        "content": "This is a new content."
+      }
+    }
+  ]
+}
