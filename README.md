@@ -4,8 +4,8 @@
 
 1. **Склонируйте репозиторий:**
     ```bash
-    git clone <URL репозитория>
-    cd <название репозитория>
+    git clone https://github.com/codeeHunter/rit_test
+    cd rit_test
     ```
 
 2. **Запустите программу:**
